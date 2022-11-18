@@ -14,10 +14,10 @@
       </div>
 <% end %>
 
-
 <div class="container">
   <div class="d-flex flex-row-reverse mt-5">
-      <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+      <%= link_to "Add a movie", new_list_bookmark_path(@list), class: "btn btn-primary mx-3" %>
+      <%= link_to "Add a review", new_list_review_path(@list), class: "btn btn-primary mx-3" %>
   </div>
   <div class = "d-flex justify-content-between align-content-around flex-wrap">
     <% @bookmarks.each do |bookmark|%>
@@ -44,5 +44,17 @@
         </div>
       <% end %>
     <% end %>
+  </div>
+  <div class= "mt-5">
+    <h3><strong>Reviews</strong></h3>
+    <ul class="list-group mt-3">
+    <% if @list.reviews.length == 0 %>
+      <li class="list-group-item">No ratings for now</li>
+    <% else %>
+      <% @list.reviews.each do |review| %>
+        <li class="list-group-item"><%= review.rating %>/5: <%= review.content %></li>
+      <% end %>
+    <% end %>
+    </ul>
   </div>
 </div>
