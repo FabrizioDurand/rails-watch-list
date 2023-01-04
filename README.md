@@ -17,11 +17,7 @@ ruby -v
 
 The ouput should start with something like `ruby 3.1.2`
 
-If not, install the right ruby version using [rbenv](https://github.com/rbenv/rbenv) (it could take a while):
-
-```shell
-rbenv install 2.5.1
-```
+If not, install the right ruby version following this link: https://www.ruby-lang.org/fr/documentation/installation/
 
 ### Install dependencies
 
