@@ -35,8 +35,14 @@ rails db:create db:migrate db:seed
 
 ## Serve
 
+Launch in two different terminal windows:
+
 ```shell
-rails s && yarn build  --watch
+rails s
+```
+
+```shell
+yarn build --watch
 ```
 
 ## Enjoy
